@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinLinTeen 商品與服務</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="個人照片" class="profile-img">
+            <h1>LinLinTeen</h1>
+            <p class="bio">歡迎來到我的個人網站！這裡有我的所有社群連結和商品資訊</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://instagram.com/your_instagram" class="social-link instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <!-- 可以根據需要添加更多社群媒體連結 -->
+        </div>
+
+        <div class="products-section">
+            <h2>我的商品</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="商品1" class="product-img">
+                    <h3>商品1</h3>
+                    <p class="product-desc">商品描述和介紹</p>
+                    <p class="product-price">NT$ 500</p>
+                    <button class="buy-btn" data-product="商品1" data-price="500">立即購買</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="商品2" class="product-img">
+                    <h3>商品2</h3>
+                    <p class="product-desc">商品描述和介紹</p>
+                    <p class="product-price">NT$ 750</p>
+                    <button class="buy-btn" data-product="商品2" data-price="750">立即購買</button>
+                </div>
+
+                <!-- 可以根據需要添加更多商品 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 購買彈窗 -->
+    <div id="purchase-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>確認購買</h2>
+            <div id="purchase-details">
+                <p>商品: <span id="modal-product-name"></span></p>
+                <p>價格: NT$ <span id="modal-product-price"></span></p>
+            </div>
+            <div class="payment-info">
+                <h3>付款資訊</h3>
+                <p>銀行: 某某銀行</p>
+                <p>帳號: 012-345-678912</p>
+                <p>戶名: LinLinTeen</p>
+            </div>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="customer-name">姓名</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-email">Email</label>
+                    <input type="email" id="customer-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">電話</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">地址</label>
+                    <input type="text" id="customer-address" required>
+                </div>
+                <button type="submit" class="confirm-btn">確認訂單</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>訂單已建立</h2>
+            <p>感謝您的購買！請根據以下資訊完成匯款：</p>
+            <div class="payment-info">
+                <p>銀行: 某某銀行</p>
+                <p>帳號: 012-345-678912</p>
+                <p>戶名: LinLinTeen</p>
+                <p>金額: NT$ <span id="confirm-amount"></span></p>
+                <p>訂單編號: <span id="order-number"></span></p>
+            </div>
+            <p>請於匯款後，將訂單編號及匯款資訊傳送至我們的Instagram，以便我們確認您的訂單。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 LinLinTeen. 版權所有。</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
